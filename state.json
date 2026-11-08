@@ -1,0 +1,55 @@
+{
+  "active": {
+    "Amsterdam Centraal>London St Pancras|2026-11-19|tuesday 17 november | - | £?": {
+      "date": "2026-11-19",
+      "route": "Amsterdam Centraal → London St Pancras",
+      "text": "Tuesday 17 November | - | £35",
+      "url": "https://snap.eurostar.com/uk-en/search?adult=1&origin=8400058&destination=7015400&outbound=2026-11-19"
+    },
+    "Amsterdam Centraal>London St Pancras|2026-11-19|wednesday 18 november | - | £?": {
+      "date": "2026-11-19",
+      "route": "Amsterdam Centraal → London St Pancras",
+      "text": "Wednesday 18 November | - | £35",
+      "url": "https://snap.eurostar.com/uk-en/search?adult=1&origin=8400058&destination=7015400&outbound=2026-11-19"
+    },
+    "London St Pancras>Amsterdam Centraal|2026-11-19|tuesday 17 november | - | £?": {
+      "date": "2026-11-19",
+      "route": "London St Pancras → Amsterdam Centraal",
+      "text": "Tuesday 17 November | - | £40",
+      "url": "https://snap.eurostar.com/uk-en/search?adult=1&origin=7015400&destination=8400058&outbound=2026-11-19"
+    },
+    "London St Pancras>Amsterdam Centraal|2026-11-19|wednesday 18 november | - | £?": {
+      "date": "2026-11-19",
+      "route": "London St Pancras → Amsterdam Centraal",
+      "text": "Wednesday 18 November | - | £35",
+      "url": "https://snap.eurostar.com/uk-en/search?adult=1&origin=7015400&destination=8400058&outbound=2026-11-19"
+    },
+    "London St Pancras>Rotterdam Centraal|2026-11-19|tuesday 17 november | - | £?": {
+      "date": "2026-11-19",
+      "route": "London St Pancras → Rotterdam Centraal",
+      "text": "Tuesday 17 November | - | £40",
+      "url": "https://snap.eurostar.com/uk-en/search?adult=1&origin=7015400&destination=8400530&outbound=2026-11-19"
+    },
+    "London St Pancras>Rotterdam Centraal|2026-11-19|wednesday 18 november | - | £?": {
+      "date": "2026-11-19",
+      "route": "London St Pancras → Rotterdam Centraal",
+      "text": "Wednesday 18 November | - | £35",
+      "url": "https://snap.eurostar.com/uk-en/search?adult=1&origin=7015400&destination=8400530&outbound=2026-11-19"
+    },
+    "Rotterdam Centraal>London St Pancras|2026-11-19|tuesday 17 november | - | £?": {
+      "date": "2026-11-19",
+      "route": "Rotterdam Centraal → London St Pancras",
+      "text": "Tuesday 17 November | - | £40",
+      "url": "https://snap.eurostar.com/uk-en/search?adult=1&origin=8400530&destination=7015400&outbound=2026-11-19"
+    },
+    "Rotterdam Centraal>London St Pancras|2026-11-19|wednesday 18 november | - | £?": {
+      "date": "2026-11-19",
+      "route": "Rotterdam Centraal → London St Pancras",
+      "text": "Wednesday 18 November | - | £50",
+      "url": "https://snap.eurostar.com/uk-en/search?adult=1&origin=8400530&destination=7015400&outbound=2026-11-19"
+    }
+  },
+  "fail_alert_sent": false,
+  "failed_runs": 0,
+  "keepalive": "2026-11-08"
+}
