@@ -80,6 +80,23 @@ USER_AGENT = (
 )
 
 PRICE_RE = re.compile(r"[£€]\s?(\d{1,4}(?:[.,]\d{2})?)")
+# The results page has a strip of neighbouring dates with their lowest prices
+# (data-testid="outbound-datepicker"). Those prices are NOT for the searched
+# date, so read the page text with the strip hidden. When the searched date has
+# nothing, Snap renders data-testid="route-unavailable-options".
+RESULTS_JS = """() => {
+  const strips = [...document.querySelectorAll('[data-testid="outbound-datepicker"]')];
+  const saved = strips.map(e => e.style.display);
+  strips.forEach(e => { e.style.display = 'none'; });
+  const text = document.body.innerText;
+  strips.forEach((e, i) => { e.style.display = saved[i]; });
+  return {
+    text,
+    hadStrip: strips.length > 0,
+    unavailable: !!document.querySelector('[data-testid="route-unavailable-options"]'),
+  };
+}"""
+
 BLOCK_MARKERS = (
     "access denied",
     "verify you are human",
@@ -196,6 +213,7 @@ def check(page, origin, destination, date):
             pass
         page.wait_for_timeout(2_500)  # let the results render
         text = page.inner_text("body", timeout=10_000)
+        results = page.evaluate(RESULTS_JS)
     except Exception as e:
         save_debug(page, name + "_ERROR")
         return {"status": "error", "detail": str(e)[:200], "url": url}
@@ -210,7 +228,13 @@ def check(page, origin, destination, date):
         save_debug(page, name + "_BLOCKED")
         return {"status": "blocked", "detail": f"HTTP {code}", "url": url}
 
-    offers = extract_offers(text)
+    if results["unavailable"]:
+        offers = {}  # page explicitly says no Snap tickets on this date
+    else:
+        if not results["hadStrip"]:
+            log("  (date strip not found - page layout may have changed; "
+                "prices for other dates could be miscounted)")
+        offers = extract_offers(results["text"])
 
     if DEBUG:
         bodies = []
@@ -222,6 +246,7 @@ def check(page, origin, destination, date):
                 pass
         save_debug(page, name, bodies)
         (DEBUG_DIR / f"{name}.txt").write_text(text)
+        (DEBUG_DIR / f"{name}.results.txt").write_text(results["text"])
 
     return {"status": "ok", "offers": offers, "url": url}
 
