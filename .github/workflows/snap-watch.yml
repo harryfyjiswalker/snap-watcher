@@ -8,6 +8,9 @@ on:
       debug:
         description: "Save screenshots/HTML of every page (1 = yes)"
         default: "0"
+      dates:
+        description: "Optional: check these dates instead of the DATES variable (e.g. 2026-11-20,2026-11-21)"
+        default: ""
 
 concurrency:
   group: snap-watcher
@@ -45,7 +48,7 @@ jobs:
           GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
           ALERT_EMAIL: ${{ secrets.ALERT_EMAIL }}
           DAYS_AHEAD: ${{ vars.DAYS_AHEAD }}
-          DATES: ${{ vars.DATES }}
+          DATES: ${{ github.event.inputs.dates || vars.DATES }}
           DEBUG: ${{ github.event.inputs.debug }}
         run: python snap_watch.py
 
