@@ -181,7 +181,10 @@ def check(page, origin, destination, date):
     )
     name = f"{date}_{origin.split()[0]}-{destination.split()[0]}"
     captured = []
-    handler = captured.append
+
+    def handler(response):  # Playwright can't wrap builtins like list.append
+        captured.append(response)
+
     if DEBUG:
         page.on("response", handler)
 
