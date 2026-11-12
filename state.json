@@ -54,6 +54,18 @@
       "text": "Once your seat is allocated, there's no changing it | There's no guarantee you'll be sat with your travel buddies | Total £60.00",
       "url": "https://snap.eurostar.com/uk-en/search?adult=1&origin=8400058&destination=7015400&outbound=2026-11-19"
     },
+    "Amsterdam Centraal>London St Pancras|2026-11-23|06:40 - 14:00 | your train time will be confirmed at least 48 hours before travel. | £?": {
+      "date": "2026-11-23",
+      "route": "Amsterdam Centraal → London St Pancras",
+      "text": "06:40 - 14:00 | Your train time will be confirmed at least 48 hours before travel. | £50",
+      "url": "https://snap.eurostar.com/uk-en/search?adult=1&origin=8400058&destination=7015400&outbound=2026-11-23"
+    },
+    "Amsterdam Centraal>London St Pancras|2026-11-23|14:00 - 18:40 | your train time will be confirmed at least 48 hours before travel. | £?": {
+      "date": "2026-11-23",
+      "route": "Amsterdam Centraal → London St Pancras",
+      "text": "14:00 - 18:40 | Your train time will be confirmed at least 48 hours before travel. | £50",
+      "url": "https://snap.eurostar.com/uk-en/search?adult=1&origin=8400058&destination=7015400&outbound=2026-11-23"
+    },
     "London St Pancras>Amsterdam Centraal|2026-11-17|06:16 - 13:00 | your train time will be confirmed at least 48 hours before travel. | £?": {
       "date": "2026-11-17",
       "route": "London St Pancras → Amsterdam Centraal",
@@ -197,6 +209,18 @@
       "route": "Rotterdam Centraal → London St Pancras",
       "text": "Once your seat is allocated, there's no changing it | There's no guarantee you'll be sat with your travel buddies | Total £60.00",
       "url": "https://snap.eurostar.com/uk-en/search?adult=1&origin=8400530&destination=7015400&outbound=2026-11-18"
+    },
+    "Rotterdam Centraal>London St Pancras|2026-11-23|07:28 - 14:00 | your train time will be confirmed at least 48 hours before travel. | £?": {
+      "date": "2026-11-23",
+      "route": "Rotterdam Centraal → London St Pancras",
+      "text": "07:28 - 14:00 | Your train time will be confirmed at least 48 hours before travel. | £70",
+      "url": "https://snap.eurostar.com/uk-en/search?adult=1&origin=8400530&destination=7015400&outbound=2026-11-23"
+    },
+    "Rotterdam Centraal>London St Pancras|2026-11-23|14:00 - 19:28 | your train time will be confirmed at least 48 hours before travel. | £?": {
+      "date": "2026-11-23",
+      "route": "Rotterdam Centraal → London St Pancras",
+      "text": "14:00 - 19:28 | Your train time will be confirmed at least 48 hours before travel. | £50",
+      "url": "https://snap.eurostar.com/uk-en/search?adult=1&origin=8400530&destination=7015400&outbound=2026-11-23"
     }
   },
   "fail_alert_sent": false,
